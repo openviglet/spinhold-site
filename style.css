@@ -389,8 +389,8 @@ button { font: inherit; color: inherit; }
 @media (max-width: 760px) { .roster { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
 .foe { padding: 30px 20px 26px; text-align: center; box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--c) 55%, transparent), 0 0 30px -10px var(--c), var(--shadow); }
 .foe::before { border-color: color-mix(in srgb, var(--c) 40%, transparent); }
-.foe .sprite { width: 72px; height: 72px; margin: 0 auto 14px; filter: drop-shadow(0 0 10px var(--c)); transition: transform .3s cubic-bezier(.34, 1.56, .64, 1); }
-.foe:hover .sprite { transform: scale(1.15) rotate(-6deg); }
+.foe .foe-art { display: block; width: 150px; height: 150px; margin: -8px auto 8px; filter: drop-shadow(0 0 14px color-mix(in srgb, var(--c) 70%, transparent)); transition: transform .3s cubic-bezier(.34, 1.56, .64, 1); }
+.foe:hover .foe-art { transform: scale(1.1) rotate(-4deg); }
 .foe h3 { font-size: 1.35rem; color: var(--c); text-shadow: 0 0 14px color-mix(in srgb, var(--c) 60%, transparent); }
 .foe p { margin-top: 8px; font-size: .98rem; }
 
