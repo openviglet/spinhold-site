@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">Spinhold · A neon ring shooter from Viglet Games</title>
+<meta name="description" data-i18n-attr="content:meta.description" content="Spinhold is an arcade shooter flown around the outside of a spinning space colony. Shoot the Lattice apart cube by cube, catch the people it carries off and fly them to the Lift. From Viglet Games, in development for Steam.">
+<meta name="theme-color" content="#0B0B1A">
+<link rel="canonical" href="https://spinhold.viglet.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://spinhold.viglet.com/">
+<meta property="og:title" content="Spinhold · A neon ring shooter from Viglet Games">
+<meta property="og:description" content="Fly round the outside of a spinning colony, shoot the Lattice into cubes and bring its people home. In development for Steam.">
+<meta property="og:image" content="https://spinhold.viglet.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,700&family=Rubik:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top">
+      <img src="assets/spinhold-wordmark.svg" alt="Spinhold" width="727" height="200">
+    </a>
+    <nav class="nav-links" aria-label="Sections" data-i18n-attr="aria-label:nav.label">
+      <a href="#world" data-i18n="nav.world">The world</a>
+      <a href="#lattice" data-i18n="nav.lattice">The Lattice</a>
+      <a href="#try" data-i18n="nav.try">Fly it</a>
+      <a href="#peek" data-i18n="nav.peek">Screens</a>
+      <a href="#next" data-i18n="nav.next">What’s next</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:nav.language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================ hero -->
+<section class="hero" id="top">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="status-pill">
+        <span class="dot" aria-hidden="true"></span>
+        <span data-i18n="hero.status">In development · Coming to Steam</span>
+      </p>
+      <p class="presents" data-i18n="hero.presents">Viglet Games presents</p>
+      <h1 data-i18n="hero.title">Fly the ring. Break the swarm. <em>Bring them home.</em></h1>
+      <p class="lead" data-i18n="hero.lead">Spinhold is an arcade shooter flown around the outside of a spinning space colony. The machines that built it have turned on it, and they are taking it apart cube by cube, people included. You fly the last tender on the hull.</p>
+      <div class="cta-row">
+        <a class="btn" href="#try" data-i18n="hero.play">Fly a sample ring</a>
+        <a class="btn btn-ghost" href="#world" data-i18n="hero.more">Meet the colony</a>
+      </div>
+      <ul class="facts">
+        <li data-i18n="hero.fact.rings">3 rings, 3 Foremen</li>
+        <li data-i18n="hero.fact.enemies">6 kinds of Lattice</li>
+        <li data-i18n="hero.fact.voxels">Everything breaks into cubes</li>
+        <li data-i18n="hero.fact.pad">Made for a gamepad</li>
+      </ul>
+    </div>
+    <figure class="hero-art">
+      <div class="screen">
+        <img src="assets/hero.webp" width="1400" height="788" alt="A frame of Spinhold: a swarm of orange Motes over the violet voxel city on the colony’s hull, the green beam of the Lift and a ×2 streak" data-i18n-attr="alt:hero.alt">
+      </div>
+      <figcaption data-i18n="hero.caption">Captured from the game, phase two</figcaption>
+    </figure>
+  </div>
+  <svg class="orbit-line" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 120C300 30 620 10 900 40s420 70 560 40" fill="none" stroke="#3FE8FF" stroke-width="3" stroke-dasharray="15 8" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+  </svg>
+</section>
+
+<!-- ============================================================ the world -->
+<section class="section section-deep" id="world">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker" data-i18n="world.kicker">The world</p>
+      <h2 data-i18n="world.title">A colony that spins so its people have weight</h2>
+      <p data-i18n="world.intro">The Spinhold is a cylinder kilometres long, turning in deep space. Down its axis runs the Sunline, the light that is its sun. The city on its hull is where you fly, one ring at a time.</p>
+    </header>
+
+    <div class="pillars">
+      <article class="panel pillar pillar-colony">
+        <span class="pillar-icon" aria-hidden="true"><img src="assets/spinhold-symbol.svg" alt="" width="84" height="84"></span>
+        <h3 data-i18n="world.colony.title">The Spinhold</h3>
+        <p data-i18n="world.colony.text">Grown cell by cell by builder machines, generations ago. That is why the whole world is voxels: everything here was made from the same cubes.</p>
+      </article>
+      <article class="panel pillar pillar-lattice">
+        <span class="pillar-icon" aria-hidden="true"><canvas class="sprite" data-sprite="mote" width="8" height="8"></canvas></span>
+        <h3 data-i18n="world.lattice.title">The Lattice</h3>
+        <p data-i18n="world.lattice.text">The builders have woken up wrong. They still follow their oldest order, build the Spinhold, but they have lost the plan, so they break it down and rebuild it as more of themselves.</p>
+      </article>
+      <article class="panel pillar pillar-holders">
+        <span class="pillar-icon" aria-hidden="true"><canvas class="sprite" data-sprite="holder" width="8" height="8"></canvas></span>
+        <h3 data-i18n="world.holders.title">The Holders</h3>
+        <p data-i18n="world.holders.text">The colony’s people: hull crews, gunners, medics and engineers with no ship of their own. The Lattice carries them off because it thinks they are part of the hull that came loose.</p>
+      </article>
+    </div>
+
+    <div class="panel holders-card">
+      <img src="assets/holders.webp" width="900" height="383" alt="Three Holders from the game: voxel colonists in cream and coral with dot eyes, blushed cheeks and a glowing green light, the middle one cheering" data-i18n-attr="alt:holders.alt" loading="lazy">
+      <div>
+        <span class="chip chip-wip" data-i18n="chip.wip">Work in progress</span>
+        <h3 data-i18n="holders.title">The only warm thing in a cold neon world</h3>
+        <p data-i18n="holders.text">Shoot a Gleaner and the Holder it was carrying falls back to the hull. Catch them, fly them through the Lift, and the colony’s core keeps them safe. Nothing grim is ever shown: a Holder the Lattice takes simply flickers out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ the lattice -->
+<section class="section section-grid" id="lattice">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker" data-i18n="lattice.kicker">Know the Lattice</p>
+      <h2 data-i18n="lattice.title">Six machines, one colour each</h2>
+      <p data-i18n="lattice.intro">Every kind of Lattice glows in a colour of its own, so a crowded ring still reads at a glance. Each one is made of cubes, and each one breaks back into them.</p>
+    </header>
+
+    <ul class="roster">
+      <li class="panel foe" style="--c:#FF5933">
+        <canvas class="sprite" data-sprite="mote" width="8" height="8" aria-hidden="true"></canvas>
+        <h3 data-i18n="foe.mote.name">Mote</h3>
+        <p data-i18n="foe.mote.text">The small swarm. Twenty at a time, chasing you round the ring.</p>
+      </li>
+      <li class="panel foe" style="--c:#FFCC33">
+        <canvas class="sprite" data-sprite="lancer" width="8" height="8" aria-hidden="true"></canvas>
+        <h3 data-i18n="foe.lancer.name">Lancer</h3>
+        <p data-i18n="foe.lancer.text">Keeps its distance and fires slow, aimed shots.</p>
+      </li>
+      <li class="panel foe" style="--c:#FF8026">
+        <canvas class="sprite" data-sprite="spur" width="8" height="8" aria-hidden="true"></canvas>
+        <h3 data-i18n="foe.spur.name">Spur</h3>
+        <p data-i18n="foe.spur.text">Grows out of the hull and fires straight up.</p>
+      </li>
+      <li class="panel foe" style="--c:#FF4DCC">
+        <canvas class="sprite" data-sprite="diver" width="8" height="8" aria-hidden="true"></canvas>
+        <h3 data-i18n="foe.diver.name">Diver</h3>
+        <p data-i18n="foe.diver.text">Hovers, draws a line to you, then dives straight down it.</p>
+      </li>
+      <li class="panel foe" style="--c:#99CCFF">
+        <canvas class="sprite" data-sprite="sower" width="8" height="8" aria-hidden="true"></canvas>
+        <h3 data-i18n="foe.sower.name">Sower</h3>
+        <p data-i18n="foe.sower.text">Crosses the ring without turning, dropping seeds that stay until shot.</p>
+      </li>
+      <li class="panel foe" style="--c:#4DFF66">
+        <canvas class="sprite" data-sprite="gleaner" width="8" height="8" aria-hidden="true"></canvas>
+        <h3 data-i18n="foe.gleaner.name">Gleaner</h3>
+        <p data-i18n="foe.gleaner.text">Rises from the hull carrying a Holder. Reach the top and it is gone with them.</p>
+      </li>
+    </ul>
+
+    <div class="subhead">
+      <h3 data-i18n="foremen.title">…and a Foreman at the end of every ring</h3>
+      <p data-i18n="foremen.intro">Its core shrugs off every hit until its weak points fall. Tap a card to see who runs each ring.</p>
+    </div>
+
+    <div class="foremen">
+      <button type="button" class="reveal" aria-pressed="false" style="--c:#66B3FF">
+        <span class="reveal-inner">
+          <span class="face front panel">
+            <span class="mystery" aria-hidden="true">?</span>
+            <span class="ring-name" data-i18n="foremen.bow.ring">Foreman of the Bow</span>
+            <span class="tap" data-i18n="foremen.tap">Tap to reveal</span>
+          </span>
+          <span class="face back panel">
+            <span class="foreman-name" data-i18n="foremen.bow.name">The Mason</span>
+            <span class="foreman-text" data-i18n="foremen.bow.text">Builds walls of Spurs across the first ring.</span>
+          </span>
+        </span>
+      </button>
+      <button type="button" class="reveal" aria-pressed="false" style="--c:#CC66FF">
+        <span class="reveal-inner">
+          <span class="face front panel">
+            <span class="mystery" aria-hidden="true">?</span>
+            <span class="ring-name" data-i18n="foremen.waist.ring">Foreman of the Waist</span>
+            <span class="tap" data-i18n="foremen.tap">Tap to reveal</span>
+          </span>
+          <span class="face back panel">
+            <span class="foreman-name" data-i18n="foremen.waist.name">The Loom</span>
+            <span class="foreman-text" data-i18n="foremen.waist.text">Weaves Motes into shapes around itself.</span>
+          </span>
+        </span>
+      </button>
+      <button type="button" class="reveal" aria-pressed="false" style="--c:#FF4D40">
+        <span class="reveal-inner">
+          <span class="face front panel">
+            <span class="mystery" aria-hidden="true">?</span>
+            <span class="ring-name" data-i18n="foremen.stern.ring">Foreman of the Stern</span>
+            <span class="tap" data-i18n="foremen.tap">Tap to reveal</span>
+          </span>
+          <span class="face back panel">
+            <span class="foreman-name" data-i18n="foremen.stern.name">The Kiln</span>
+            <span class="foreman-text" data-i18n="foremen.stern.text">The one that turns Holders into cells. Nobody knows yet who gave it its orders.</span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ the tender -->
+<section class="section section-deep" id="tender">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker" data-i18n="tender.kicker">The tender</p>
+      <h2 data-i18n="tender.title">A hull-maintenance craft, armed in a hurry</h2>
+      <p data-i18n="tender.intro">Tenders used to fly the hull fixing what the Lattice built. Yours is the last one flying, and it has three tricks for a crowded ring.</p>
+    </header>
+
+    <ul class="tools">
+      <li class="panel tool" style="--c:#3FE8FF">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h22M10 16h14M10 32h14"/><path d="M28 14l14 10-14 10z"/></svg>
+        <h3 data-i18n="tools.dash.name">Dash</h3>
+        <p data-i18n="tools.dash.text">Hold it and the tender tears through the swarm untouchable, killing whatever it hits, until the meter runs dry.</p>
+      </li>
+      <li class="panel tool" style="--c:#99E6FF">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="5"/><path d="M12 12a17 17 0 0 0 0 24M36 12a17 17 0 0 1 0 24M6 6a26 26 0 0 0 0 36M42 6a26 26 0 0 1 0 36"/></svg>
+        <h3 data-i18n="tools.pulse.name">Pulse</h3>
+        <p data-i18n="tools.pulse.text">A shockwave sent both ways round the whole ring, clearing every machine and every shot it meets.</p>
+      </li>
+      <li class="panel tool" style="--c:#FFD94D">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="24" r="6"/><path d="M20 20h24M20 28h24M20 24h26"/></svg>
+        <h3 data-i18n="tools.burst.name">Sunline burst</h3>
+        <p data-i18n="tools.burst.text">Kills charge it. Full, the tender draws on the colony’s sun and fires it ahead for four slowed seconds.</p>
+      </li>
+    </ul>
+
+    <div class="panel streak">
+      <div>
+        <h3 data-i18n="streak.title">Keep the streak alive</h3>
+        <p data-i18n="streak.text">Every kill raises the multiplier a step, all the way to ×99, and refills its window. Let two and a half seconds pass without one, or lose the tender, and it falls back to one.</p>
+      </div>
+      <ol class="ladder" aria-label="The streak climbing kill by kill" data-i18n-attr="aria-label:streak.label">
+        <li>×1</li><li>×2</li><li>×3</li><li>×10</li><li>×50</li><li>×99</li>
+      </ol>
+    </div>
+
+    <div class="panel rescue">
+      <div>
+        <h3 data-i18n="rescue.title">Every rescue pays</h3>
+        <p data-i18n="rescue.text">Each delivery through the Lift pays the next thing on the list: a life, a pulse, a shield, then points that grow with every Holder you bring in at once. Save everyone in a ring and it pays a bonus.</p>
+      </div>
+      <ol class="rewards">
+        <li data-i18n="rescue.life">Life</li>
+        <li data-i18n="rescue.pulse">Pulse</li>
+        <li data-i18n="rescue.shield">Shield</li>
+        <li data-i18n="rescue.points">Points</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ fly it -->
+<section class="section section-grid" id="try">
+  <div class="wrap try-grid">
+    <div class="try-copy">
+      <header class="section-head section-head-left">
+        <p class="kicker" data-i18n="try.kicker">Fly it</p>
+        <h2 data-i18n="try.title">A sample ring, right here</h2>
+        <p data-i18n="try.intro">The colony seen end on, with your tender always on top. Shoot the Motes, knock Holders loose from the Gleaners, catch them and fly them through the green Lift. Five waves.</p>
+      </header>
+
+      <div class="panel hud">
+        <div class="hud-cell">
+          <span class="hud-label" data-i18n="try.score">Score</span>
+          <output class="hud-value" id="hud-score">0</output>
+        </div>
+        <div class="hud-cell">
+          <span class="hud-label" data-i18n="try.streak">Streak</span>
+          <output class="hud-value hud-streak" id="hud-streak">×1</output>
+        </div>
+        <div class="hud-cell">
+          <span class="hud-label" data-i18n="try.lives">Lives</span>
+          <output class="hud-value" id="hud-lives">3</output>
+        </div>
+        <div class="hud-cell">
+          <span class="hud-label" data-i18n="try.pulses">Pulses</span>
+          <output class="hud-value" id="hud-pulses">2</output>
+        </div>
+        <div class="hud-cell">
+          <span class="hud-label" data-i18n="try.saved">Saved</span>
+          <output class="hud-value" id="hud-saved">0</output>
+        </div>
+      </div>
+
+      <dl class="keys">
+        <div><dt><kbd>←</kbd><kbd>→</kbd></dt><dd data-i18n="keys.move">fly round the ring</dd></div>
+        <div><dt><kbd>↑</kbd><kbd>↓</kbd></dt><dd data-i18n="keys.climb">climb and dive</dd></div>
+        <div><dt><kbd>J</kbd><kbd>L</kbd></dt><dd data-i18n="keys.fire">fire left or right</dd></div>
+        <div><dt><kbd>Shift</kbd></dt><dd data-i18n="keys.dash">dash</dd></div>
+        <div><dt><kbd>B</kbd></dt><dd data-i18n="keys.pulse">pulse</dd></div>
+      </dl>
+      <p class="fine" data-i18n="try.note">A gamepad works too. On a phone, drag to fly and the tender fires on its own. This is a web sample drawn in 2D from the game’s rules, not the game: no sound, no Lancers or Foremen, and none of the voxels.</p>
+    </div>
+
+    <div class="stage">
+      <div class="panel stage-frame">
+        <div class="arena" id="arena" tabindex="0" role="application" aria-roledescription="shooter" aria-label="Sample Spinhold ring. Arrow keys fly, J and L fire, Shift dashes and B sends a pulse." data-i18n-attr="aria-label:try.label">
+          <canvas id="arena-canvas"></canvas>
+          <div class="announce" aria-hidden="true"></div>
+          <div class="arena-card" id="arena-start">
+            <div class="panel end-card">
+              <h3 class="card-title" data-i18n="try.ready">Ready on the hull</h3>
+              <p class="card-text" data-i18n="try.readyText">Five waves. Keep the Holders out of the Lattice’s hands.</p>
+              <button type="button" class="btn" id="launch" data-i18n="try.launch">Launch</button>
+            </div>
+          </div>
+          <div class="arena-card" id="arena-end" hidden>
+            <div class="panel end-card">
+              <h3 class="card-title end-title"></h3>
+              <p class="end-score"></p>
+              <p class="card-text end-text"></p>
+              <button type="button" class="btn end-again"></button>
+            </div>
+          </div>
+          <div class="touch" aria-hidden="true">
+            <button type="button" class="touch-btn" data-touch="dash" data-i18n="touch.dash">Dash</button>
+            <button type="button" class="touch-btn" data-touch="pulse" data-i18n="touch.pulse">Pulse</button>
+          </div>
+        </div>
+      </div>
+      <p class="sr-only" aria-live="polite" id="arena-live"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ screens -->
+<section class="section section-deep" id="peek">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker" data-i18n="peek.kicker">Screens</p>
+      <h2 data-i18n="peek.title">Straight from the game</h2>
+      <p data-i18n="peek.intro">Every frame here is captured from the running build. The names on screen are still placeholders, and plenty will change before launch.</p>
+    </header>
+
+    <div class="gallery">
+      <figure class="panel shot shot-wide">
+        <button type="button" class="shot-open" data-full="assets/gallery-waist.webp">
+          <img src="assets/gallery-waist.webp" alt="The Waist ring in violet: the tender flying over the voxel city with a line of seeds and a pack of Motes ahead" data-i18n-attr="alt:peek.waist.alt" loading="lazy" width="1600" height="900">
+        </button>
+        <figcaption><span class="chip chip-wip" data-i18n="chip.wip">Work in progress</span> <span data-i18n="peek.waist">The Waist ring, and a Sower’s trail of seeds</span></figcaption>
+      </figure>
+      <figure class="panel shot">
+        <button type="button" class="shot-open" data-full="assets/gallery-mason.webp">
+          <img src="assets/gallery-mason.webp" alt="The Mason, a tower of white and violet blocks standing from floor to ceiling over the blue city, a heat vent burning open in its side" data-i18n-attr="alt:peek.mason.alt" loading="lazy" width="1600" height="900">
+        </button>
+        <figcaption><span class="chip chip-wip" data-i18n="chip.wip">Work in progress</span> <span data-i18n="peek.mason">The Mason, Foreman of the Bow, a vent burning open</span></figcaption>
+      </figure>
+      <figure class="panel shot">
+        <button type="button" class="shot-open" data-full="assets/gallery-loom.webp">
+          <img src="assets/gallery-loom.webp" alt="The Loom, a serpent of blue and magenta segments arching over the violet city, its jaws open" data-i18n-attr="alt:peek.loom.alt" loading="lazy" width="1600" height="900">
+        </button>
+        <figcaption><span class="chip chip-wip" data-i18n="chip.wip">Work in progress</span> <span data-i18n="peek.loom">The Loom, Foreman of the Waist, weaving over the city</span></figcaption>
+      </figure>
+      <figure class="panel shot">
+        <button type="button" class="shot-open" data-full="assets/gallery-kiln.webp">
+          <img src="assets/gallery-kiln.webp" alt="The Kiln, a violet titan standing over the red city with one hand raised to slam, the tender flying past" data-i18n-attr="alt:peek.kiln.alt" loading="lazy" width="1600" height="900">
+        </button>
+        <figcaption><span class="chip chip-wip" data-i18n="chip.wip">Work in progress</span> <span data-i18n="peek.kiln">The Kiln, Foreman of the Stern, a hand raised to slam</span></figcaption>
+      </figure>
+      <figure class="panel shot">
+        <button type="button" class="shot-open" data-full="assets/gallery-bow.webp">
+          <img src="assets/gallery-bow.webp" alt="The Bow ring in blue: the tender firing along the hull past tall voxel blocks, a Mote on the right" data-i18n-attr="alt:peek.bow.alt" loading="lazy" width="1600" height="900">
+        </button>
+        <figcaption><span class="chip chip-wip" data-i18n="chip.wip">Work in progress</span> <span data-i18n="peek.bow">The Bow, where every shift begins</span></figcaption>
+      </figure>
+      <figure class="panel shot">
+        <button type="button" class="shot-open" data-full="assets/hero.webp">
+          <img src="assets/hero.webp" alt="A swarm of orange Motes closing in over the violet city, the green Lift beam behind them and a ×2 streak in the corner" data-i18n-attr="alt:peek.swarm.alt" loading="lazy" width="1400" height="788">
+        </button>
+        <figcaption><span class="chip chip-wip" data-i18n="chip.wip">Work in progress</span> <span data-i18n="peek.swarm">A swarm, the Lift and a streak starting</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ what's next -->
+<section class="section section-grid" id="next">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker" data-i18n="next.kicker">What’s next</p>
+      <h2 data-i18n="next.title">The people you save become your crew</h2>
+      <p data-i18n="next.intro">The arcade game above is playable today. This is what is being built on top of it.</p>
+    </header>
+
+    <ul class="plans">
+      <li class="panel plan plan-hook">
+        <span class="chip chip-plan" data-i18n="chip.plan">Planned</span>
+        <h3 data-i18n="next.crew.title">Every rescue is a pick</h3>
+        <p data-i18n="next.crew.text">Deliver a Holder and choose one of three to join your tender. A gunner, a dock mechanic, a medic: each does their old job aboard, and two of them together can become something neither is alone.</p>
+      </li>
+      <li class="panel plan">
+        <span class="chip chip-plan" data-i18n="chip.plan">Planned</span>
+        <h3 data-i18n="next.tenders.title">Three tenders</h3>
+        <p data-i18n="next.tenders.text">Wren, the balanced one you fly today; Swift, light and fast; Bastion, slow and heavy.</p>
+      </li>
+      <li class="panel plan">
+        <span class="chip chip-plan" data-i18n="chip.plan">Planned</span>
+        <h3 data-i18n="next.watch.title">The watch</h3>
+        <p data-i18n="next.watch.text">Today’s shift, the same for every pilot, with one attempt that counts.</p>
+      </li>
+      <li class="panel plan">
+        <span class="chip chip-plan" data-i18n="chip.plan">Planned</span>
+        <h3 data-i18n="next.heat.title">Heat</h3>
+        <p data-i18n="next.heat.text">The Lattice learns from every shift it loses, and comes back sharper.</p>
+      </li>
+      <li class="panel plan">
+        <span class="chip chip-plan" data-i18n="chip.plan">Planned</span>
+        <h3 data-i18n="next.coop.title">Two tenders, one ring</h3>
+        <p data-i18n="next.coop.text">Couch co-op on one screen, and online through Steam Remote Play Together.</p>
+      </li>
+      <li class="panel plan">
+        <span class="chip chip-plan" data-i18n="chip.plan">Planned</span>
+        <h3 data-i18n="next.fair.title">A fair score</h3>
+        <p data-i18n="next.fair.text">Unlocks add choices, never power. No shop, no loot boxes, one price.</p>
+      </li>
+    </ul>
+
+    <blockquote class="panel crew-line">
+      <p data-i18n="next.quote">“Nobody else gets left. Fly.”</p>
+      <footer data-i18n="next.quoteBy">Nana Ruth, medic, on joining the crew</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============================================================ studio -->
+<section class="section section-deep studio" id="studio">
+  <div class="wrap">
+    <span class="lockup-plate"><img class="lockup" src="assets/viglet-games-lockup.webp" alt="Viglet Games" width="800" height="274"></span>
+    <h2 data-i18n="studio.title">We craft epic Steam adventures.</h2>
+    <p class="studio-text" data-i18n="studio.text">Viglet Games is a publisher driven by creativity and heart. After the plush match-3 Cottony, Spinhold is our first trip into neon.</p>
+    <ul class="values">
+      <li>
+        <span class="value-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7.5h10a5 5 0 0 1 4.9 6l-.7 3.4a2.4 2.4 0 0 1-4.1 1.1L15 15.8H9L6.9 18a2.4 2.4 0 0 1-4.1-1.1L2.1 13.5A5 5 0 0 1 7 7.5Z"/></svg></span>
+        <span data-i18n="studio.play">Games made for the pad</span>
+      </li>
+      <li>
+        <span class="value-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.3-4.4-9.3-8.9C1.3 8.3 3.3 4.6 7 4.6c2 0 3.7 1.1 5 2.9 1.3-1.8 3-2.9 5-2.9 3.7 0 5.7 3.7 4.3 7-2 4.5-9.3 8.9-9.3 8.9Z"/></svg></span>
+        <span data-i18n="studio.connect">Experiences that connect</span>
+      </li>
+      <li>
+        <span class="value-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2 6.3 20.3l1.2-6.4L2.8 9.5l6.4-.8Z"/></svg></span>
+        <span data-i18n="studio.detail">Creativity in every detail</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ finale -->
+<section class="finale">
+  <div class="wrap">
+    <div class="panel finale-card">
+      <canvas class="sprite finale-holder" data-sprite="holder" width="8" height="8" aria-hidden="true"></canvas>
+      <img class="finale-logo" src="assets/spinhold-wordmark.svg" alt="Spinhold" width="727" height="200">
+      <h2 data-i18n="finale.title">Spinhold is on its way to Steam</h2>
+      <p data-i18n="finale.text">The store page isn’t open yet. Until it is, send this page to someone who still owes you a high score.</p>
+      <div class="cta-row cta-center">
+        <button type="button" class="btn" id="share" data-i18n="finale.share">Share this page</button>
+        <span class="soon-pill" data-i18n="finale.soon">Steam page coming soon</span>
+      </div>
+      <p class="share-status" id="share-status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p data-i18n="foot.text">© 2026 Viglet Games. Spinhold is in development, and anything shown here may change.</p>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <form method="dialog"><button type="submit" class="lightbox-close" aria-label="Close" data-i18n-attr="aria-label:peek.close">×</button></form>
+  <img alt="">
+  <p class="lightbox-caption"></p>
+</dialog>
+
+</body>
+</html>
