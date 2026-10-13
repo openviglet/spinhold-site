@@ -213,8 +213,25 @@
   const attrPairs = node => node.dataset.i18nAttr.split(';').map(pair => pair.split(':'));
   attrNodes.forEach(node => attrPairs(node).forEach(([attr, key]) => english.set(key, node.getAttribute(attr))));
 
+  // Frames of play show the game's own words, so each has a pt-BR capture beside it in
+  // assets/pt-BR/ (RK167, tools/site_assets.py --locale pt_BR); the page shows the set in
+  // its language. Pictures with no words in them are one set.
+  const LOCAL_PICTURES = new Set(['hero.webp', 'gallery-waist.webp', 'gallery-bow.webp',
+    'gallery-mason.webp', 'gallery-loom.webp', 'gallery-kiln.webp']);
+  const localPicture = path => {
+    const name = path.replace(/^assets\/(pt-BR\/)?/, '');
+    if (!path.startsWith('assets/') || !LOCAL_PICTURES.has(name)) return path;
+    return lang === 'pt' ? `assets/pt-BR/${name}` : `assets/${name}`;
+  };
+
   function setLang(next) {
     lang = next === 'pt' ? 'pt' : 'en';
+    document.querySelectorAll('img[src^="assets/"]').forEach(img => {
+      img.setAttribute('src', localPicture(img.getAttribute('src')));
+    });
+    document.querySelectorAll('[data-full^="assets/"]').forEach(button => {
+      button.dataset.full = localPicture(button.dataset.full);
+    });
     const pick = key => (lang === 'pt' && key in PT ? PT[key] : english.get(key));
     textNodes.forEach(node => { node.innerHTML = pick(node.dataset.i18n); });
     attrNodes.forEach(node => attrPairs(node).forEach(([attr, key]) => node.setAttribute(attr, pick(key))));
