@@ -634,11 +634,14 @@ kbd {
 /* ------------------------------------------------------------------ studio */
 
 .studio { text-align: center; }
-.lockup-plate {
-  display: inline-block; padding: 18px 30px; border-radius: 22px;
-  background: #FFFAEE; box-shadow: 0 0 0 5px rgba(255, 250, 238, .25), 0 0 40px -10px rgba(255, 250, 238, .5);
+/* the label's flat mark and name, the lockup games.viglet.com wears, leading to that page */
+.lockup {
+  display: inline-flex; align-items: center; gap: 14px; text-decoration: none;
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(1.7rem, 3.6vw, 2.4rem); color: var(--ink);
 }
-.lockup { display: block; width: clamp(220px, 30vw, 340px); }
+.lockup img { width: clamp(56px, 7vw, 72px); height: auto; filter: drop-shadow(0 0 22px rgba(239, 90, 76, .45)); }
+.lockup b { color: #EF5A4C; font-weight: 700; }
+.lockup:hover b { color: #F7915E; }
 .studio h2 { margin-top: 30px; font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
 .studio-text { margin: 12px auto 0; max-width: 36em; font-size: 1.12rem; }
 
